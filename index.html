@@ -1,232 +1,257 @@
 <!DOCTYPE html>
-<!-- My Edit -->
 <html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/extras.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-    <a href="page2.html" class="w3-bar-item w3-button w3-hide-small">PAGE 2</a>
-    <a href="page3.html" class="w3-bar-item w3-button w3-hide-small">PAGE 3</a>
-    <a href="page4.html" class="w3-bar-item w3-button w3-hide-small">PAGE 4</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="page2.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PAGE 2</a>
-    <a href="page3.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PAGE 3</a>
-    <a href="page4.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PAGE 4</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-  </div>
-</div>
-
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span>
-  </div>
-</div>
-
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>I love photography</em></p>
-  <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-      <img src="images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
-    </div>
-
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-</div>
-
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">14+</span><br>
-    Partners
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">55+</span><br>
-    Projects Done
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">89+</span><br>
-    Happy Clients
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
-    Meetings
-  </div>
-</div>
-
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
-  </div>
-</div>
-
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src="images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
-      <img src="images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-    </div>
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
-  <p class="w3-center"><em>I'd love your feedback!</em></p>
-
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <img src="images/map.jpg" class="w3-image w3-round" style="width:100%">
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
-      </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-          </div>
+    <head>
+        <title>Home | StarFit</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/starfit.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    </head>
+    
+    <body>
+        <div class="page-title">
+            <h1 >StarFit: Find Your Fit</h1>
         </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
-
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-
-</body>
+        
+        <div class = "account-options">
+            <img class = "account-img" src = "images/girl (2).png" width ="30" height = "30" alt = "Current User Account" title = "My Account">
+            <div class = "account-name">Ahri</div>
+            <img class = "account-dropdown" src = "images/dropdown.png" width = "30" height = "30" alt = "List of Account Options" title = "Account Options">
+            <img class = "account-notifications" src = "images/alerts.png" width  = "40" height = "40" alt = "User Notifications" title = "Notifications">
+        </div>
+        <div class="profiles-wrapper">
+            <div class = "list-title">
+                <h3>Try on for...</h3>
+            </div>
+            <ul class="profiles-list-wrapper">
+                <!--profile names and avatars (to float left of name)-->
+                <!-- updated profile page link to be implemented when user selected -->
+                <li><a class = "user1" href = Jane.html> <img class = "user-avi" src = "images/girl.png" alt = "User 1" title = "Select Jane">
+                    Jane A.</a></li>
+                <li><a class = "user2" href = Liz.html> <img class = "user-avi" src = "images/girl (1).png" alt = "User 2" title = "Select Liz">
+                    Irelia B.</a></li>
+                <!-- included "active" bar for Ahri-->
+                <li class = "user3"><a class = "user3" href = Ahri.html> <img class = "user-active" src = "images/active.png" alt = "User Active Status">
+                    <img class = "user-avi" src = "images/girl (2).png" alt = "User 3" title = "Select Ahri">
+                    Ahri C.</a></li>
+                <li><a class = "user4" href = Garen.html> <img class = "user-avi" src = "images/boy.png"alt = "User 4" title = "Select Garen">
+                    Garen D.</a></li>
+                <li><a class = "user5" href = Leona.html> <img class = "user-avi" src = "images/girl (3).png" alt = "User 5" title = "Select Leona">
+                    Leona E.</a></li>
+            </ul>
+            <div>
+                <a  class = "new-profile-button" href = "newprofile.html">  <!-- new profile page link to be implemented-->
+                    <p class = "new-profile-text">Create a New Profile</p>
+                </a>
+            </div>
+        </div>
+        <div class ="user-profile-container">
+        <div class="imgcontainer">
+            <img id="profile-pic" src="https://cdn.pixabay.com/photo/2017/05/18/17/58/women-2324247_960_720.png" alt="profile picture">
+        </div>
+        <div class="container">
+            <form action="/action_page.php">
+                <table>
+                <tr>
+                    <td><label for="name">Name*</label></td>
+                    <td><input type="text" id="name" name="username" placeholder="Your name.."></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender*</label></td>
+                    <td><select id="gender" name="gender">
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                        </select></td>
+                <tr>
+                    <td><label for="h">Height* </label></td>
+                    <td><input type="text" id="h" name="height" placeholder="Your height..."></td>
+                <tr>
+                <tr>
+                    <td><label for="w">Weight*</label></td>
+                    <td><input type="text" id="w" name="weight" placeholder="Your weight..."></td>
+                </tr>
+                <tr>
+                    <td><label for="w">Chest</label></td>
+                    <td><input type="text" id="c" name="chest" placeholder="Your chest measurement..."></td>
+                </tr>
+                <tr>
+                    <td><label for="w">Waist</label></td>
+                    <td><input type="text" id="w" name="waist" placeholder="Your waist measurement ..."></td>
+                </tr>
+                <tr>
+                    <td><label for="w">Bust</label></td>
+                    <td><input type="text" id="b" name="bust" placeholder="Your bust measurement ..."></td>
+                </tr>
+                <tr>
+                    <td><label for="w">Sleeve length</label></td>
+                    <td><input type="text" id="s" name="sleeve" placeholder="Your sleeve length ..."></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Save & Try something on!"></td>
+                </tr>
+                    </table>
+            </form>
+        </div>
+        </div>
+        
+        
+        <div class=gallery>
+            <div class="gallery-item">
+                <img src="images/history1.jpg" alt="Big Face Fur Jacket">
+                <div class="description">Big Face Fur Jacket</div>
+                <div id="m0" class="dropdown">
+                    <span>Submit a Review</span>
+                    <div class="dropdown-content">
+                        <i class="material-icons" onclick="setStar(0,0)" id="s00">star_border</i>
+                        <i class="material-icons" onclick="setStar(0,1)" id="s01">star_border</i>
+                        <i class="material-icons" onclick="setStar(0,2)" id="s02">star_border</i>
+                        <i class="material-icons" onclick="setStar(0,3)" id="s03">star_border</i>
+                        <i class="material-icons" onclick="setStar(0,4)" id="s04">star_border</i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/history2.jpg" alt="Play Boy Sweater">
+                <div class="description">Play Boy Sweater</div>
+                <div id="m1" class="dropdown">
+                    <span>Submit a Review</span>
+                    <div class="dropdown-content">
+                        <i class="material-icons" onclick="setStar(1,0)" id="s10">star_border</i>
+                        <i class="material-icons" onclick="setStar(1,1)" id="s11">star_border</i>
+                        <i class="material-icons" onclick="setStar(1,2)" id="s12">star_border</i>
+                        <i class="material-icons" onclick="setStar(1,3)" id="s13">star_border</i>
+                        <i class="material-icons" onclick="setStar(1,4)" id="s14">star_border</i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/history3.jpg" alt="Dog Face Hoody">
+                <div class="description">Dog Face Hoody</div>
+                <div id="m2" class="dropdown">
+                    <span>Submit a Review</span>
+                    
+                    <div class="dropdown-content">
+                        <i class="material-icons" onclick="setStar(2,0)" id="s20">star_border</i>
+                        <i class="material-icons" onclick="setStar(2,1)" id="s21">star_border</i>
+                        <i class="material-icons" onclick="setStar(2,2)" id="s22">star_border</i>
+                        <i class="material-icons" onclick="setStar(2,3)" id="s23">star_border</i>
+                        <i class="material-icons" onclick="setStar(2,4)" id="s24">star_border</i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/history4.jpg" alt="Women White Suit + Pink Suitcase">
+                <div class="description">Women White Suit + Pink Suitcase</div>
+                <div id="m3" class="dropdown">
+                    <span>Submit a Review</span>
+                    
+                    <div class="dropdown-content">
+                        <i class="material-icons" onclick="setStar(3,0)" id="s30">star_border</i>
+                        <i class="material-icons" onclick="setStar(3,1)" id="s31">star_border</i>
+                        <i class="material-icons" onclick="setStar(3,2)" id="s32">star_border</i>
+                        <i class="material-icons" onclick="setStar(3,3)" id="s33">star_border</i>
+                        <i class="material-icons" onclick="setStar(3,4)" id="s34">star_border</i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/history5.jpg" alt="Black and White Checker Hypebeast Coat">
+                <div class="description">Black and White Checker Coat</div>
+                <div id="m4" class="dropdown">
+                    <span>Submit a Review</span>
+                    
+                    <div class="dropdown-content">
+                        <i class="material-icons" onclick="setStar(4,0)" id="s40">star_border</i>
+                        <i class="material-icons" onclick="setStar(4,1)" id="s41">star_border</i>
+                        <i class="material-icons" onclick="setStar(4,2)" id="s42">star_border</i>
+                        <i class="material-icons" onclick="setStar(4,3)" id="s43">star_border</i>
+                        <i class="material-icons" onclick="setStar(4,4)" id="s44">star_border</i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/history6.jpg" alt="Rare Sweater">
+                <div class="description">Rare Sweater</div>
+                <div id="m5" class="dropdown">
+                    <span>Submit a Review</span>
+                    
+                    <div class="dropdown-content">
+                        <i class="material-icons" onclick="setStar(5,0)" id="s50">star_border</i>
+                        <i class="material-icons" onclick="setStar(5,1)" id="s51">star_border</i>
+                        <i class="material-icons" onclick="setStar(5,2)" id="s52">star_border</i>
+                        <i class="material-icons" onclick="setStar(5,3)" id="s53">star_border</i>
+                        <i class="material-icons" onclick="setStar(5,4)" id="s54">star_border</i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/history7.jpg" alt="Naruto Cosplay Costume">
+                <div class="description">Naruto Cosplay Costume</div>
+                <div id="m6" class="dropdown">
+                    <span>Submit a Review</span>
+                    
+                    <div class="dropdown-content">
+                        <i class="material-icons" onclick="setStar(6,0)" id="s60">star_border</i>
+                        <i class="material-icons" onclick="setStar(6,1)" id="s61">star_border</i>
+                        <i class="material-icons" onclick="setStar(6,2)" id="s62">star_border</i>
+                        <i class="material-icons" onclick="setStar(6,3)" id="s63">star_border</i>
+                        <i class="material-icons" onclick="setStar(6,4)" id="s64">star_border</i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/history8.jpg" alt="Reflective Jacket">
+                <div class="description">Reflective Jacket</div>
+                <div id="m7" class="dropdown">
+                    <span>Submit a Review</span>
+                    <div class="dropdown-content">
+                        <i class="material-icons" onclick="setStar(7,0)" id="s70">star_border</i>
+                        <i class="material-icons" onclick="setStar(7,1)" id="s71">star_border</i>
+                        <i class="material-icons" onclick="setStar(7,2)" id="s72">star_border</i>
+                        <i class="material-icons" onclick="setStar(7,3)" id="s73">star_border</i>
+                        <i class="material-icons" onclick="setStar(7,4)" id="s74">star_border</i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/history9.jpg" alt="Cartoon Pony Hoody">
+                <div class="description">Cartoon Pony Hoody</div>
+                <div id="m8" class="dropdown">
+                    <span>Submit a Review</span>
+                    <div class="dropdown-content">
+                        <i class="material-icons" onclick="setStar(8,0)" id="s80">star_border</i>
+                        <i class="material-icons" onclick="setStar(8,1)" id="s81">star_border</i>
+                        <i class="material-icons" onclick="setStar(8,2)" id="s82">star_border</i>
+                        <i class="material-icons" onclick="setStar(8,3)" id="s83">star_border</i>
+                        <i class="material-icons" onclick="setStar(8,4)" id="s84">star_border</i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/history10.jpg" alt="Ramen Hoody">
+                <div class="description">Ramen Hoody</div>
+                <div id="m9" class="dropdown">
+                    <span>Submit a Review</span>
+                    <div class="dropdown-content">
+                        <i class="material-icons" onclick="setStar(9,0)" id="s90">star_border</i>
+                        <i class="material-icons" onclick="setStar(9,1)" id="s91">star_border</i>
+                        <i class="material-icons" onclick="setStar(9,2)" id="s92">star_border</i>
+                        <i class="material-icons" onclick="setStar(9,3)" id="s93">star_border</i>
+                        <i class="material-icons" onclick="setStar(9,4)" id="s94">star_border</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src = "main.js"></script>
+    </body>
 </html>
