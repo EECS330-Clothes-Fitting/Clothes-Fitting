@@ -1,7 +1,8 @@
-	body {
-		font-family: Optima, Garamond,"Trebuchet MS",Helvetica, sans-serif;
-		background-color: #dfdce1;
-	}
+body {
+    font-family: Optima, Garamond,"Trebuchet MS",Helvetica, sans-serif;
+	background-color: #dfdce1;
+    margin: 0px;
+}
 
 a {
   color: #747375;
@@ -9,18 +10,17 @@ a {
   text-align: right;
   line-height: 1.5;
   font-size: 20px;
-  bottom-border: 1px solid #605a66;
+  border-bottom: 1px solid #605a66;
 
 
-}
-h4{
-	font-family: "Trebuchet MS", Helvetica;
-	width: 150px;
 }
 
 
 * {
   box-sizing: border-box;
+}
+table {
+    border-spacing: 0px;
 }
 
 input[type=text], select, textarea {
@@ -36,6 +36,7 @@ label {
   padding: 12px 0px 12px 0;
   display: inline-block;
   color: #353238;
+    width: 100%;
 }
 
 input[type=submit] {
@@ -56,26 +57,23 @@ input[type=submit]:hover {
 }
 
 #profile-pic{
-	height:30vw;
-	margin-right:5vw;
+
+    max-height: 466px;
+    margin: 0 5% 0 10%;
 }
 
-.imgcontainer{
-	display:inline-block;
-	position: relative;
-	float: left;
-	float: top;
-	left: 60px;
-	top: 20px;
+.selected-profile-container{
+    margin: 15px 0;
+    
+    width: 100%;
 }
-
 
 .container {
+    display: inline-block;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
 	width:40%;
-	display:inline-block;
 
 }
 
@@ -91,156 +89,113 @@ table {
 }
 
 
+.header{
+    width: 100%;
+	height: 50px;
+	background-color: #353238;
+	
+    
+}
 
 .page-title{
-	position: relative;
-	float:top;
-	width: 110%;
-	height: 50px;
-	top: -20px;
-	left: -10px;
+	height: 30px;
+	float:left;
 	color: #d4abe6;
-	background-color: #353238;
 	/*horiz. offset, vert. offset, blur radius*/
 	font-family: "Trebuchet MS", Helvetica;
 	font-size: 28px;
-	text-indent: 20px;
-	padding-top: 5px;
+    padding: 10px 15px; 
 
 }
 
-.profiles-wrapper{
-width: 110px;
-    float:left
+.account-options{
+	position: relative;
+	float:top;
+	float:right;
+    display: flex;
+	background-color: #605a66;
+	line-height: 1.5;
+	text-align: center;
+	color: white;
+	font-size: 24px;
+	padding: 10px 15px;
+
+}
+.account-options * {
+    height:30px;
+}
+
+.profile-wrapper {
+    margin: 10px;
+}
+
+
+.profile-selector-wrapper{
+    float:left;
 }
 .list-title{
-	position: relative;
-	float:top;
-	top: 0px;
+    width: 100%;
 	color: #8e689f;
 	text-align:center;
+    font-weight:bold;
+    font-family: "Trebuchet MS", Helvetica;
+    font-size: 20px;
+    padding: 10px;
 }
 
-.profiles-list-wrapper{
-	position: relative;
-	float:top;
-	width: 155px;
-	top: -20px;
-	list-style-image:; 
+.profiles-table{
+	width: 100%;
 	/*possibly use for avatars?*/
 	font-size: 24px;
-	display: inline-block;
-	margin-left: 10px;
-	padding: 5px 20px 10px 5px;
-	margin: 5px;
-	list-style-type: none;
-	background-color: #353238;
     color: #747375;
     text-align: left;
     text-decoration: none;
-    margin: 0px 2px;
     cursor: pointer;
-    border-style: double;
-    border-width: 5px;
+    border-style:solid;
+    border-color:#8e689f;
+    border-width: 4px;
+}
+
+
+.profiles-table tr{
+	background-color: #353238;
 }
 
 /*to be changed to style for whatever current user is*/
-.profiles-list-wrapper .user3{ 
-	position: relative;
-	float: left;
-	left: -5px;
+.profiles-table tr.userActive{
 	background-color: #605a66;
-	width: 142px;
 	color: white;
-	font-style: bold;
-	margin-right: 10px;
-	border-left: 8px solid #d4abe6;
-	text-align: center;
+	font-weight: bold;
+}
+
+
+.profiles-table tr.user:hover{
+    background-color: #504a56;
+    color: #AAAAAA
 }
 
 .user-avi{
-	position: relative;
-	float:top left;
-	top:5px;
-	left: -5px;
     width: 30px;
-    height:30px;
-    border-left: 20px #d4abe6;
-    text-align: left;
 
 }
 .new-profile-button{
-	position: relative;
-	float:top;
-	float:left;
-	height: 50px;
-	width: 155px;
-	top: 0px;
-	left: 0px;
+    margin-top: 10px;
+	width: 100%;
 	background-color: #8e689f;
 	border: none;
     color: white;
-    padding: 5px 0px 0px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     border-radius: 4px;
-
-}
-.new-profile-text{
-	position: relative;
-	float:top;
-	float:left;
-	top: -5px;
-	left: -2px;
 	font-weight: bold;
 	font-size: 14px;
 	font-family: "Trebuchet MS", Helvetica;
+    padding: 10px;
 
 }
-.account-options{
-	position: relative;
-	float:top;
-	float:right;
-	background-color: #605a66;
-	top: -60px;
-	right: -10px;
-	line-height: 1.5;
-	text-align: center;
-	color: white;
-	font-size: 24px;
-	padding: 0px 0px 5px 15px;
 
-}
-.account-img{
-	position: relative;
-	float:top;
-	float:right;
-	top: 10px;
-	right: 122px;
-}
-.account-name{
-	position: relative;
-	float:top;
-	float:right;
-	top: 8px;
-	right: 38px;
-}
-.account-dropdown{
-	position: relative;
-	float:top;
-	float:right;
-	top: 13px;
-	right: -32px;
-}
-.account-notifications{
-	position: relative;
-	float:top;
-	float:right;
-	top: 7px;
-	right: -100px;
-}
 
 .back-button {
 	position: relative;
@@ -263,27 +218,29 @@ width: 110px;
 	font-size: 8px;
 }
 
-.user-active {
-    width:8px;
-    height: 36px;
-    
+
+.gallery{
+    display: flow-root;
+    width: 100%;
 }
 
 
-
-
-
-.gallery{
-    display: flex;
+.gallery-header{
+    	color: #7e588f;
+font-weight:bold;
+    font-family: "Trebuchet MS", Helvetica;
+    font-size: 20px;
+    padding: 10px;
 }
 
 .gallery-item {
   margin: 5px;
-  border: 1px solid black;
+  border: 2px solid #8e689f;
+border-radius: 2px;
   float: left;
   width: 180px;
   height: 264px;
-  opacity: 0.5;
+  opacity: 0.75;
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
@@ -293,7 +250,7 @@ width: 110px;
 
 }
 
-div.gallery-item img {
+.gallery-item img {
   width: 100%;
     height:189px;
     object-fit: cover;
@@ -307,25 +264,28 @@ div.gallery-item img {
     font-weight: bold;
     font-size: .95em;
 }
+.droptext {
+    height: 25px;
+    padding: 4px;
+}
 
-.dropdown {
+.dropdown, .dropdown-set {
     bottom:auto;
 	width: 100%;
     height: 25px;
 	text-align: center;
-	background-color: pink;
- font-weight:bold;
+	background-color: #d4abe6;
+    font-weight:bold;
     font-size: 0.9em;
     box-sizing: border-box;
-    padding: 5px;
 }
 
-.dropdown:hover span{
+.dropdown:hover .droptext{
     display:none;
 }
 
-.dropdown:hover{
-    
+.dropdown:hover,.dropdown-set{
+    height: 25px;
     padding: 0px;
 }
 
@@ -333,24 +293,19 @@ div.gallery-item img {
   display: none;
 }
 
-.dropdown:hover div.dropdown-content {
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
 .dropdown-set {
-    bottom:auto;
-	width: 100%;
-    height: 25px;
 	text-align: center;
-	background-color: pink;
-    box-sizing: border-box;
 }
 
-.dropdown-set span{
+.dropdown-set .droptext{
     display:none;
 }
 
 
-.dropdown-set div.dropdown-content {
+.dropdown-set .dropdown-content {
   display: block;
 }

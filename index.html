@@ -2,106 +2,120 @@
 <html>
     <head>
         <title>Home | StarFit</title>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/starfit.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link type="text/css" rel="stylesheet" href="css/starfit.css">
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     </head>
     
     <body>
-        <div class="page-title">
-            <p class= "page-title">StarFit: Find Your Fit</p>
-        </div>
-        
-        <div class = "account-options">
-            <img class = "account-img" src = "images/girl (2).png" width ="30" height = "30" alt = "Current User Account" title = "My Account">
-            <div class = "account-name">Ahri</div>
-            <img class = "account-dropdown" src = "images/dropdown.png" width = "30" height = "30" alt = "List of Account Options" title = "Account Options">
-            <img class = "account-notifications" src = "images/alerts.png" width  = "40" height = "40" alt = "User Notifications" title = "Notifications">
-        </div>
-        <div class="profiles-wrapper">
-            <div class = "list-title">
-                <h4 class = "list-title">Select a Profile:</h4>
+        <div class = "header">
+            <div class="page-title">StarFit: Find Your Fit</div>
+            <div class = "account-options">
+                <img class = "account-img" src = "images/girl2.png"  alt = "Current User Account" title = "My Account">
+                <div class = "account-name">Ahri</div>
+                <img class = "account-dropdown" src = "images/dropdown.png" alt = "List of Account Options" title = "Account Options">
+                <img class = "account-notifications" src = "images/alerts.png"  alt = "User Notifications" title = "Notifications">
             </div>
-            <ul class="profiles-list-wrapper">
+        </div>
+        <div class = "profile-wrapper">
+        <div class="profile-selector-wrapper">
+            <div class = "list-title">Select Profile:</div>
+            <table class="profiles-table">
                 <!--profile names and avatars (to float left of name)-->
                 <!-- updated profile page link to be implemented when user selected -->
-                <li><a class = "user1" href = Jane.html> <img class = "user-avi" src = "images/girl.png" alt = "User 1" title = "Select Jane">
-                    Jane A.</a></li>
-                <li><a class = "user2" href = Liz.html> <img class = "user-avi" src = "images/girl (1).png" alt = "User 2" title = "Select Liz">
-                    Irelia B.</a></li>
+                <tr class = "user" id="user1">
+                    <a href = "Jane.html">
+                        <td><img class = "user-avi" src = "images/girl0.png" alt = "User 1" title = "Select Jane"></td>
+                        <td>Jane A.</td>
+                    </a>
+                </tr>
+                <tr class = "user" id="user2">
+                    <a href = Liz.html>
+                        <td><img class = "user-avi" src = "images/girl1.png" alt = "User 2" title = "Select Liz"></td>
+                        <td>Irelia B.</td>
+                    </a>
+                </tr>
                 <!-- included "active" bar for Ahri-->
-                <li class = "user3"><a class = "user3" href = Ahri.html> 
-                    <img class = "user-avi" src = "images/girl (2).png" alt = "User 3" title = "Select Ahri">
-                    Ahri C.</a></li>
-                <li><a class = "user4" href = Garen.html> <img class = "user-avi" src = "images/boy.png"alt = "User 4" title = "Select Garen">
-                    Garen D.</a></li>
-                <li><a class = "user5" href = Leona.html> <img class = "user-avi" src = "images/girl (3).png" alt = "User 5" title = "Select Leona">
-                    Leona E.</a></li>
-            </ul>
+                <tr class="userActive user" id="user3">
+                    <a href = Ahri.html> 
+                        <td><img class = "user-avi" src = "images/girl2.png" alt = "User 3" title = "Select Ahri"></td>
+                        <td>Ahri C.</td>
+                    </a>
+                </tr>
+                <tr class = "user" id="user4">
+                    <a href = Garen.html>
+                        <td><img class = "user-avi" src = "images/boy.png" alt = "User 4" title = "Select Garen"></td>
+                        <td>Garen D.</td>
+                    </a>
+                </tr>
+                <tr class = "user" id="user5">
+                    <a href = Leona.html> 
+                        <td><img class = "user-avi" src = "images/girl3.png" alt = "User 5" title = "Select Leona"></td>
+                        <td>Leona E.</td>
+                    </a>
+                </tr>
+            </table>
             <div>
-                <a  class = "new-profile-button" href = "newprofile.html">  <!-- new profile page link to be implemented-->
-                    <p class = "new-profile-text">Create a New Profile</p>
-                </a>
+                <a  class = "new-profile-button" href = "newprofile.html">Create a New Profile</a>
             </div>
         </div>
-        <div class ="user-profile-container">
-        <div class="imgcontainer">
+        <div class ="selected-profile-container">
             <img id="profile-pic" src="https://cdn.pixabay.com/photo/2017/05/18/17/58/women-2324247_960_720.png" alt="profile picture">
-        </div>
-        <div class="container">
-            <form action="/action_page.php">
-                <table>
-                <tr>
-                    <td><label for="name">Name*</label></td>
-                    <td><input type="text" id="name" name="username" placeholder="Your name.."></td>
-                </tr>
-                <tr>
-                    <td><label for="gender">Gender*</label></td>
-                    <td><select id="gender" name="gender">
-                            <option value="m">Male</option>
-                            <option value="f">Female</option>
-                        </select></td>
-                <tr>
-                    <td><label for="h">Height* (cm) </label></td>
-                    <td><input type="text" id="h" name="height" placeholder="Your height..."></td>
-                <tr>
-                <tr>
-                    <td><label for="w">Weight* (kg)</label></td>
-                    <td><input type="text" id="w" name="weight" placeholder="Your weight..."></td>
-                </tr>
-                <tr>
-                    <td><label for="w">Chest (cm)</label></td>
-                    <td><input type="text" id="c" name="chest" placeholder="Your chest measurement..."></td>
-                </tr>
-                <tr>
-                    <td><label for="w">Waist (cm)</label></td>
-                    <td><input type="text" id="w" name="waist" placeholder="Your waist measurement ..."></td>
-                </tr>
-                <tr>
-                    <td><label for="w">Bust (cm)</label></td>
-                    <td><input type="text" id="b" name="bust" placeholder="Your bust measurement ..."></td>
-                </tr>
-                <tr>
-                    <td><label for="w">Sleeve length (cm)</label></td>
-                    <td><input type="text" id="s" name="sleeve" placeholder="Your sleeve length ..."></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="submit" value="Save & Try something on!"></td>
-                </tr>
+            <div class="container">
+                <form action="/action_page.php">
+                    <table>
+                        <tr>
+                            <td><label for="name">Name*</label></td>
+                            <td><input type="text" id="name" name="username" placeholder="Your name.."></td>
+                        </tr>
+                        <tr>
+                            <td><label for="gender">Gender*</label></td>
+                            <td><select id="gender" name="gender">
+                                <option value="m">Male</option>
+                                <option value="f">Female</option>
+                                </select></td>
+                        <tr>
+                            <td><label for="h">Height* (cm) </label></td>
+                            <td><input type="text" id="h" name="height" placeholder="Your height..."></td>
+                        </tr>
+                        <tr>
+                            <td><label for="w">Weight* (kg)</label></td>
+                            <td><input type="text" id="w" name="weight" placeholder="Your weight..."></td>
+                        </tr>
+                        <tr>
+                            <td><label for="c">Chest (cm)</label></td>
+                            <td><input type="text" id="c" name="chest" placeholder="Your chest measurement..."></td>
+                        </tr>
+                        <tr>
+                            <td><label for="wa">Waist (cm)</label></td>
+                            <td><input type="text" id="wa" name="waist" placeholder="Your waist measurement ..."></td>
+                        </tr>
+                        <tr>
+                            <td><label for="b">Bust (cm)</label></td>
+                            <td><input type="text" id="b" name="bust" placeholder="Your bust measurement ..."></td>
+                        </tr>
+                        <tr>
+                            <td><label for="s">Sleeve length (cm)</label></td>
+                            <td><input type="text" id="s" name="sleeve" placeholder="Your sleeve length ..."></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" value="Save & Try something on!"></td>
+                        </tr>
                     </table>
-            </form>
-        </div>
+                </form>
+            </div>
         </div>
         
-        
-        <div class=gallery>
-            <div class="gallery-item">
-                <img src="images/history1.jpg" alt="Big Face Fur Jacket">
-                <div class="description">Big Face Fur Jacket</div>
-                <div id="m0" class="dropdown">
-                    <span>Submit a Review</span>
+        </div>
+        <div class="gallery">
+            <div class="gallery-header">Other Items You've Tried</div>
+            <table class="gallery-item">
+                <tr><td><img src="images/history1.jpg" alt="Big Face Fur Jacket"></td></tr>
+                <tr><td class="description">Big Face Fur Jacket</td></tr>
+                <tr><td id="m0" class="dropdown">
+                    <div class="droptext">Submit a Fit Review</div>
                     <div class="dropdown-content">
                         <i class="material-icons" onclick="setStar(0,0)" id="s00">star_border</i>
                         <i class="material-icons" onclick="setStar(0,1)" id="s01">star_border</i>
@@ -109,14 +123,14 @@
                         <i class="material-icons" onclick="setStar(0,3)" id="s03">star_border</i>
                         <i class="material-icons" onclick="setStar(0,4)" id="s04">star_border</i>
                     </div>
-                </div>
-            </div>
+                </td></tr>
+            </table>
             
-            <div class="gallery-item">
-                <img src="images/history2.jpg" alt="Play Boy Sweater">
-                <div class="description">Play Boy Sweater</div>
-                <div id="m1" class="dropdown">
-                    <span>Submit a Review</span>
+            <table class="gallery-item">
+                <tr><td><img src="images/history2.jpg" alt="Play Boy Sweater"></td></tr>
+                <tr><td class="description">Play Boy Sweater</td></tr>
+                <tr><td id="m1" class="dropdown">
+                    <div class="droptext">Submit a Fit Review</div>
                     <div class="dropdown-content">
                         <i class="material-icons" onclick="setStar(1,0)" id="s10">star_border</i>
                         <i class="material-icons" onclick="setStar(1,1)" id="s11">star_border</i>
@@ -124,15 +138,14 @@
                         <i class="material-icons" onclick="setStar(1,3)" id="s13">star_border</i>
                         <i class="material-icons" onclick="setStar(1,4)" id="s14">star_border</i>
                     </div>
-                </div>
-            </div>
+                </td></tr>
+            </table>
             
-            <div class="gallery-item">
-                <img src="images/history3.jpg" alt="Dog Face Hoody">
-                <div class="description">Dog Face Hoody</div>
-                <div id="m2" class="dropdown">
-                    <span>Submit a Review</span>
-                    
+            <table class="gallery-item">
+                <tr><td><img src="images/history3.jpg" alt="Dog Face Hoody"></td></tr>
+                <tr><td class="description">Dog Face Hoody</td></tr>
+                <tr><td id="m2" class="dropdown">
+                    <div class="droptext">Submit a Fit Review</div>
                     <div class="dropdown-content">
                         <i class="material-icons" onclick="setStar(2,0)" id="s20">star_border</i>
                         <i class="material-icons" onclick="setStar(2,1)" id="s21">star_border</i>
@@ -140,15 +153,14 @@
                         <i class="material-icons" onclick="setStar(2,3)" id="s23">star_border</i>
                         <i class="material-icons" onclick="setStar(2,4)" id="s24">star_border</i>
                     </div>
-                </div>
-            </div>
+                </td></tr>
+            </table>
             
-            <div class="gallery-item">
-                <img src="images/history4.jpg" alt="Women's White Suit + Pink Suitcase">
-                <div class="description"> White Suit + Pink Suitcase</div>
-                <div id="m3" class="dropdown">
-                    <span>Submit a Review</span>
-                    
+            <table class="gallery-item">
+                <tr><td><img src="images/history4.jpg" alt="Women's White Suit + Pink Suitcase"></td></tr>
+                <tr><td class="description"> White Suit + Pink Suitcase</td></tr>
+                <tr><td id="m3" class="dropdown">
+                    <div class="droptext">Submit a Fit Review</div>
                     <div class="dropdown-content">
                         <i class="material-icons" onclick="setStar(3,0)" id="s30">star_border</i>
                         <i class="material-icons" onclick="setStar(3,1)" id="s31">star_border</i>
@@ -156,15 +168,14 @@
                         <i class="material-icons" onclick="setStar(3,3)" id="s33">star_border</i>
                         <i class="material-icons" onclick="setStar(3,4)" id="s34">star_border</i>
                     </div>
-                </div>
-            </div>
+                </td></tr>
+            </table>
             
-            <div class="gallery-item">
-                <img src="images/history5.jpg" alt="Black and White Checker Hypebeast Coat">
-                <div class="description">Black and White Checker Coat</div>
-                <div id="m4" class="dropdown">
-                    <span>Submit a Review</span>
-                    
+            <table class="gallery-item">
+                <tr><td><img src="images/history5.jpg" alt="Black and White Checker Hypebeast Coat"></td></tr>
+                <tr><td class="description">Black and White Checker Coat</td></tr>
+                <tr><td id="m4" class="dropdown">
+                    <div class="droptext">Submit a Fit Review</div>
                     <div class="dropdown-content">
                         <i class="material-icons" onclick="setStar(4,0)" id="s40">star_border</i>
                         <i class="material-icons" onclick="setStar(4,1)" id="s41">star_border</i>
@@ -172,15 +183,14 @@
                         <i class="material-icons" onclick="setStar(4,3)" id="s43">star_border</i>
                         <i class="material-icons" onclick="setStar(4,4)" id="s44">star_border</i>
                     </div>
-                </div>
-            </div>
+                </td></tr>
+            </table>
             
-            <div class="gallery-item">
-                <img src="images/history6.jpg" alt="Rare Sweater">
-                <div class="description">Rare Sweater</div>
-                <div id="m5" class="dropdown">
-                    <span>Submit a Review</span>
-                    
+            <table class="gallery-item">
+                <tr><td><img src="images/history6.jpg" alt="Rare Sweater"></td></tr>
+                <tr><td class="description">Rare Sweater</td></tr>
+                <tr><td id="m5" class="dropdown">
+                    <div class="droptext">Submit a Fit Review</div>
                     <div class="dropdown-content">
                         <i class="material-icons" onclick="setStar(5,0)" id="s50">star_border</i>
                         <i class="material-icons" onclick="setStar(5,1)" id="s51">star_border</i>
@@ -188,15 +198,14 @@
                         <i class="material-icons" onclick="setStar(5,3)" id="s53">star_border</i>
                         <i class="material-icons" onclick="setStar(5,4)" id="s54">star_border</i>
                     </div>
-                </div>
-            </div>
+                </td></tr>
+            </table>
             
-            <div class="gallery-item">
-                <img src="images/history7.jpg" alt="Naruto Cosplay Costume">
-                <div class="description">Naruto Cosplay Costume</div>
-                <div id="m6" class="dropdown">
-                    <span>Submit a Review</span>
-                    
+            <table class="gallery-item">
+                <tr><td><img src="images/history7.jpg" alt="Naruto Cosplay Costume"></td></tr>
+                <tr><td class="description">Naruto Cosplay Costume</td></tr>
+                <tr><td id="m6" class="dropdown">
+                    <div class="droptext">Submit a Fit Review</div>
                     <div class="dropdown-content">
                         <i class="material-icons" onclick="setStar(6,0)" id="s60">star_border</i>
                         <i class="material-icons" onclick="setStar(6,1)" id="s61">star_border</i>
@@ -204,14 +213,14 @@
                         <i class="material-icons" onclick="setStar(6,3)" id="s63">star_border</i>
                         <i class="material-icons" onclick="setStar(6,4)" id="s64">star_border</i>
                     </div>
-                </div>
-            </div>
+                </td></tr>
+            </table>
             
-            <div class="gallery-item">
-                <img src="images/history8.jpg" alt="Reflective Jacket">
-                <div class="description">Reflective Jacket</div>
-                <div id="m7" class="dropdown">
-                    <span>Submit a Review</span>
+            <table class="gallery-item">
+                <tr><td><img src="images/history8.jpg" alt="Reflective Jacket"></td></tr>
+                <tr><td class="description">Reflective Jacket</td></tr>
+                <tr><td id="m7" class="dropdown">
+                    <div class="droptext">Submit a Fit Review</div>
                     <div class="dropdown-content">
                         <i class="material-icons" onclick="setStar(7,0)" id="s70">star_border</i>
                         <i class="material-icons" onclick="setStar(7,1)" id="s71">star_border</i>
@@ -219,14 +228,14 @@
                         <i class="material-icons" onclick="setStar(7,3)" id="s73">star_border</i>
                         <i class="material-icons" onclick="setStar(7,4)" id="s74">star_border</i>
                     </div>
-                </div>
-            </div>
+                    </td></tr>
+            </table>
             
-            <div class="gallery-item">
-                <img src="images/history9.jpg" alt="Cartoon Pony Hoodie">
-                <div class="description">Cartoon Pony Hoodie</div>
-                <div id="m8" class="dropdown">
-                    <span>Submit a Review</span>
+            <table class="gallery-item">
+                <tr><td><img src="images/history9.jpg" alt="Cartoon Pony Hoodie"></td></tr>
+                <tr><td class="description">Cartoon Pony Hoodie</td></tr>
+                <tr><td id="m8" class="dropdown">
+                    <div class="droptext">Submit a Fit Review</div>
                     <div class="dropdown-content">
                         <i class="material-icons" onclick="setStar(8,0)" id="s80">star_border</i>
                         <i class="material-icons" onclick="setStar(8,1)" id="s81">star_border</i>
@@ -234,14 +243,14 @@
                         <i class="material-icons" onclick="setStar(8,3)" id="s83">star_border</i>
                         <i class="material-icons" onclick="setStar(8,4)" id="s84">star_border</i>
                     </div>
-                </div>
-            </div>
+                </td></tr>
+            </table>
             
-            <div class="gallery-item">
-                <img src="images/history10.jpg" alt="Ramen Hoodie">
-                <div class="description">Ramen Hoodie</div>
-                <div id="m9" class="dropdown">
-                    <span>Submit a Review</span>
+            <table class="gallery-item">
+                <tr><td><img src="images/history10.jpg" alt="Ramen Hoodie"></td></tr>
+                <tr><td class="description">Ramen Hoodie</td></tr>
+                <tr><td id="m9" class="dropdown">
+                    <div class="droptext">Submit a Fit Review</div>
                     <div class="dropdown-content">
                         <i class="material-icons" onclick="setStar(9,0)" id="s90">star_border</i>
                         <i class="material-icons" onclick="setStar(9,1)" id="s91">star_border</i>
@@ -249,8 +258,8 @@
                         <i class="material-icons" onclick="setStar(9,3)" id="s93">star_border</i>
                         <i class="material-icons" onclick="setStar(9,4)" id="s94">star_border</i>
                     </div>
-                </div>
-            </div>
+                </td></tr>
+            </table>
         </div>
         <script src = "main.js"></script>
     </body>
