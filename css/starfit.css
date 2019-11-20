@@ -1,5 +1,6 @@
 	body {
-		font-family: Garamond,"Trebuchet MS",Helvetica, sans-serif;
+		font-family: Optima, Garamond,"Trebuchet MS",Helvetica, sans-serif;
+		background-color: #dfdce1;
 	}
 
 a {
@@ -7,9 +8,16 @@ a {
   text-decoration: none;
   text-align: right;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 20px;
+  bottom-border: 1px solid #605a66;
+
 
 }
+h4{
+	font-family: "Trebuchet MS", Helvetica;
+	width: 150px;
+}
+
 
 * {
   box-sizing: border-box;
@@ -21,16 +29,18 @@ input[type=text], select, textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
+  color: #747375;
 }
 
 label {
-  padding: 12px 12px 12px 0;
+  padding: 12px 0px 12px 0;
   display: inline-block;
+  color: #353238;
 }
 
 input[type=submit] {
 	margin-top:20px;
-  background-color: #4CAF50;
+  background-color: #8e689f;
   color: white;
   padding: 12px 20px;
 	width:100%;
@@ -42,7 +52,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #ccc;
 }
 
 #profile-pic{
@@ -52,7 +62,13 @@ input[type=submit]:hover {
 
 .imgcontainer{
 	display:inline-block;
+	position: relative;
+	float: left;
+	float: top;
+	left: 60px;
+	top: 20px;
 }
+
 
 .container {
   border-radius: 5px;
@@ -79,15 +95,17 @@ table {
 .page-title{
 	position: relative;
 	float:top;
-	width: 100%;
+	width: 110%;
+	height: 50px;
 	top: -20px;
-	left: 0px;
+	left: -10px;
 	color: #d4abe6;
-	background: #353238;
+	background-color: #353238;
 	/*horiz. offset, vert. offset, blur radius*/
-	height: 40px;
-	text-align: center;
-	padding-top: 20px;
+	font-family: "Trebuchet MS", Helvetica;
+	font-size: 28px;
+	text-indent: 20px;
+	padding-top: 5px;
 
 }
 
@@ -98,68 +116,77 @@ width: 110px;
 .list-title{
 	position: relative;
 	float:top;
-	top: -5px;
+	top: 0px;
+	color: #8e689f;
+	text-align:center;
 }
+
 .profiles-list-wrapper{
 	position: relative;
 	float:top;
-	width: 110px;
+	width: 155px;
 	top: -20px;
 	list-style-image:; 
 	/*possibly use for avatars?*/
-	font-size: 18px;
+	font-size: 24px;
 	display: inline-block;
 	margin-left: 10px;
-	padding: 5px 0px 10px 5px;
+	padding: 5px 20px 10px 5px;
 	margin: 5px;
 	list-style-type: none;
 	background-color: #353238;
-    border: none;
     color: #747375;
     text-align: left;
     text-decoration: none;
-    font-size: 12px;
     margin: 0px 2px;
     cursor: pointer;
+    border-style: double;
+    border-width: 5px;
 }
 
 /*to be changed to style for whatever current user is*/
 .profiles-list-wrapper .user3{ 
-	background-color: #605a66;
-	color: white;
-	border-color: white;
-	padding: 0px;
-}
-.profiles-list-wrapper .user3 .user-active{
 	position: relative;
-	float:top;
-	float:left;
-	top: 1px;
+	float: left;
 	left: -5px;
+	background-color: #605a66;
+	width: 142px;
+	color: white;
+	font-style: bold;
+	margin-right: 10px;
+	border-left: 8px solid #d4abe6;
+	text-align: center;
 }
+
 .user-avi{
 	position: relative;
-	float:top;
+	float:top left;
 	top:5px;
+	left: -5px;
     width: 30px;
     height:30px;
+    border-left: 20px #d4abe6;
+    text-align: left;
+
 }
 .new-profile-button{
 	position: relative;
 	float:top;
 	float:left;
-	height: 30px;
+	height: 50px;
+	width: 155px;
 	top: 0px;
 	left: 0px;
-	background-color: #d4abe6;
+	background-color: #8e689f;
 	border: none;
-    color: black;
-    padding: 0px 5px;
+    color: white;
+    padding: 5px 0px 0px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 12px;
     cursor: pointer;
+    border-radius: 4px;
+
 }
 .new-profile-text{
 	position: relative;
@@ -168,6 +195,8 @@ width: 110px;
 	top: -5px;
 	left: -2px;
 	font-weight: bold;
+	font-size: 14px;
+	font-family: "Trebuchet MS", Helvetica;
 
 }
 .account-options{
@@ -175,13 +204,13 @@ width: 110px;
 	float:top;
 	float:right;
 	background-color: #605a66;
-	top: -330px;
+	top: -60px;
 	right: -10px;
 	line-height: 1.5;
 	text-align: center;
 	color: white;
 	font-size: 24px;
-	padding: 0px 0px 10px 15px;
+	padding: 0px 0px 5px 15px;
 
 }
 .account-img{
@@ -253,7 +282,7 @@ width: 110px;
   border: 1px solid black;
   float: left;
   width: 180px;
-  height: 324px;
+  height: 264px;
   opacity: 0.5;
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
@@ -266,7 +295,7 @@ width: 110px;
 
 div.gallery-item img {
   width: 100%;
-    height:252px;
+    height:189px;
     object-fit: cover;
 
 }
@@ -276,7 +305,7 @@ div.gallery-item img {
 	height: 43px;
 	text-align: center;
     font-weight: bold;
-    font-size: 1.1em
+    font-size: .95em;
 }
 
 .dropdown {
