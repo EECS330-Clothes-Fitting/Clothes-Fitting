@@ -22,5 +22,12 @@ function setStar(item, rating) {
     document.getElementById("m"+item).className="dropdown-set"
 }
 
+function openTryOn(){
+    alert("You are going to try on clothes! (not implemented)")
+}
+
+function saveChanges(){
+    alert("You are saving your changes! (not implemented)")
+}
 
 init();

@@ -73,41 +73,103 @@
                         <tr>
                             <td><label for="gender">Gender*</label></td>
                             <td><select id="gender" name="gender">
+                                <option>Choose your gender...</option>
                                 <option value="m">Male</option>
                                 <option value="f">Female</option>
                                 </select></td>
                         <tr>
                             <td><label for="h">Height* (cm) </label></td>
-                            <td><input type="text" id="h" name="height" placeholder="Your height..."></td>
+                            <td><input type="number" id="h" name="height" placeholder="Your height..."></td>
                         </tr>
                         <tr>
                             <td><label for="w">Weight* (kg)</label></td>
-                            <td><input type="text" id="w" name="weight" placeholder="Your weight..."></td>
-                        </tr>
+                            <td><input type="number" id="w" name="weight" placeholder="Your weight..."></td>
+
                         <tr>
                             <td><label for="c">Chest (cm)</label></td>
-                            <td><input type="text" id="c" name="chest" placeholder="Your chest measurement..."></td>
+                            <td><input type="number" id="c" name="chest" placeholder="Your chest measurement..."></td>
+                            <td><a class="info-button" href="#popup1"><i class="fas fa-question-circle"></i></a></td>
                         </tr>
                         <tr>
                             <td><label for="wa">Waist (cm)</label></td>
-                            <td><input type="text" id="wa" name="waist" placeholder="Your waist measurement ..."></td>
+                            <td><input type="number" id="wa" name="waist" placeholder="Your waist measurement ..."></td>
+                            <td><a class="info-button" href="#popup2"><i class="fas fa-question-circle"></i></a></td>
                         </tr>
                         <tr>
-                            <td><label for="b">Bust (cm)</label></td>
-                            <td><input type="text" id="b" name="bust" placeholder="Your bust measurement ..."></td>
+                            <td><label for="b">Hip (cm)</label></td>
+                            <td><input type="number" id="b" name="hip" placeholder="Your hip measurement ..."></td>
+                            <td><a class="info-button" href="#popup3"><i class="fas fa-question-circle"></i></a></td>
                         </tr>
                         <tr>
                             <td><label for="s">Sleeve length (cm)</label></td>
-                            <td><input type="text" id="s" name="sleeve" placeholder="Your sleeve length ..."></td>
+                            <td><input type="number" id="s" name="sleeve" placeholder="Your sleeve length ..."></td>
+                            <td><a class="info-button" href="#popup4"><i class="fas fa-question-circle"></i></a></td>
                         </tr>
                         <tr>
-                            <td colspan="2"><input type="submit" value="Save & Try something on!"></td>
+                            <td colspan="3"><input type="submit" onclick="saveChanges()" value="Save changes"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"> <input type="submit" onclick="openTryOn()" value="Try something on!"></td>
                         </tr>
                     </table>
                 </form>
             </div>
         </div>
-        
+
+        <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Chest Measurement</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <img class="popup-pic"src="images/chest.png"> <br>
+                        <b>How to measure your chest:</b><br>
+                        1.Wrap the tape measure under your armpits, around the fullest part of your chest.<br>
+                        2.The tape measure should be snug. Not so tight that it constricts breathing, but not so loose that the tape measure slides down.<br>
+                        3.Don't puff out or flex your chest. Just stand normally.<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup2" class="overlay">
+                <div class="popup">
+                    <h2>Waist Measurement</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <img class="popup-pic" src="images/waist.png"> <br>
+                        <b>How to measure your waist:</b><br>
+                        1.Start at the top of your hip bone, then bring the tape measure all the way around your body, level with your belly button.<br>
+                        2.Make sure it's not too tight and that it's straight, even at the back. Don't hold your breath while measuring.<br>
+                        3.Check the number on the tape measure right after you exhale.<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup3" class="overlay">
+                <div class="popup">
+                    <h2>Hip Measurement</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <img class="popup-pic" src="images/hip.jpg"> <br>
+                        <b>How to measure your hips:</b><br>
+                        To measure your hips, remove your outer garments, put your feet together, and wrap a soft measuring tape straight and snug around the widest part of your hips. Your hip measurement is the point at which the end of the tape meets the remaining length.<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup4" class="overlay">
+                <div class="popup">
+                    <h2>Sleeve Length Measurement</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        <img id="sleeve" class="popup-pic" src="images/sleeve.jpg"> <br>
+                        <b>How to measure your sleeve length:</b><br>
+                        Measure from the center back of your neck (at your spine) to the end of your shoulder at the top of your arm. 2. Measure from your shoulder to just past your wrist bone to where you would like your shirt cuff to sit. Always slightly bend the elbow when measuring to allow for extra ease.<br>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="gallery">
             <div class="gallery-header">Other Items You've Tried</div>
