@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fit Results | StarFit</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/starfit.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    </head>
+    
+    <body>
+        <div class = "header">
+            <div class="page-title">StarFit: Find Your Fit</div>
+            <div class = "account-options">
+                <img class = "account-img" src = "images/girl2.png"  alt = "Current User Account" title = "My Account">
+                <div class = "account-name">Ahri</div>
+                <img class = "account-dropdown" src = "images/dropdown.png" alt = "List of Account Options" title = "Account Options">
+                <img class = "account-notifications" src = "images/alerts.png"  alt = "User Notifications" title = "Notifications">
+            </div>
+        </div>
+        <form class="searchBar" action = "/action_page.php">
+            <table>
+                <tr><td><input class = "url" type="url" name="URL" placeholder="Enter Clothing URL" required></td>
+                    <td><input class = "search-url" type="submit" value="Try it on!"></td>
+                    <td><input class = "return-home" type="submit" value="Return to Home"></td>
+                </tr>
+            </table>
+        </form>
+        <table class = "fit-wrapper" border = "1">
+            <tr >
+                <th class = "fit-scores"><b>Measurement</b></th>
+                <th class = "fit-scores"><b>Score</b></th>
+                <th class = "slidecontainer"><b>Fit (0 = Very Snug Fit, 100 = Very Loose Fit)</b></th>
+            </tr>
+            <tr class = "fit-scores">
+                <td class = "fit-scores">Neck</td>
+                <td class = "fit-scores">N/A</td>
+                <td class = "slidecontainer">No neck measurements found for this item.</td>
+            </tr>
+            <tr>
+                <td class = "fit-scores">Chest</td>
+                <td class = "fit-scores">52</td>
+                <td class="slidecontainer">
+                    <input type="range" min="0" max="100" value="52" step = "1" class="slider" list = "steplist">
+                    <!--<datalist id="steplist">
+<option value = "0" label = "More Snug">0</option>
+<option value = "50">50</option>
+<option value = "100" label = "More Loose">100</option>
+</datalist>
+-->
+                </td>			
+            </tr>
+            <tr>
+                <td class = "fit-scores">Waist</td>
+                <td class = "fit-scores">56</td>
+                <td class="slidecontainer">
+                    <input type="range" min="0" max="100" value="56" class="slider" id="myRange">
+                </td>	
+            </tr>
+            <tr>
+                <td class = "fit-scores">Hip</td>
+                <td class = "fit-scores">48</td>
+                <td class="slidecontainer">
+                    <input type="range" min="0" max="100" value="48" class="slider" id="myRange">
+                </td>					
+            </tr>
+            <tr>
+                <td class = "fit-scores">Sleeves</td>
+                <td class = "fit-scores">34</td>
+                <td class="slidecontainer">
+                    <input type="range" min="0" max="100" value="34" class="slider" id="myRange">
+                </td>					
+            </tr>
+        </table>
+        <table class="descriptionWrapper box">
+            <tr >
+                <th colspan="2" class="boxTitle">Specifications Summary</th>
+            </tr>
+                <tr class="boxContent">
+                    <td>User Profile:</td>
+                    <td class="boxItem">Michael Scott</td>
+                </tr>
+                
+                <tr class="boxContent">
+                    <td>Cloth Brand:</td>
+                    <td class="boxItem">Moncler</td>
+                </tr>
+                
+                <tr class="boxContent">
+                    <td>Style:</td>
+                    <td class="boxItem">Classic Fit</td>
+                </tr>
+                
+                <tr class="boxContent">
+                    <td>Price:</td>
+                    <td class="boxItem">$1999.99</td>
+                </tr>
+                
+                <tr class="boxContent">
+                    <td>Material:</td>
+                    <td class="boxItem">100% Cotton</td>
+                </tr>
+                
+                <tr class="boxContent">
+                    <td>Country of Origin:</td>
+                    <td class="boxItem">Japan</td>
+                </tr>
+                
+                <tr class="boxContent">
+                    <td class="storelink" colspan="2"><a id="storeLink" href="https://store.moncler.com/en-us/parka_cod4146401443491697.html#dept=sbm-icons-w">Go to Store</a></td>
+                </tr>
+        </table>
+        <table class="simulatedLookWrapper box">
+            <tr> <th class="boxTitle" colspan="3">Simulated Look</th></tr>
+            <tr><td class="boxItem" rowspan="3" ><img class="simulatedImg" src="images/simulatedLook.jpg" alt="Big Face Fur Jacket"></td>
+                    <td><input type="radio" id="S" name="drone" value="S"></td>
+                    <td class="boxItem"><label for="S">S</label></td>
+                </tr>
+            <tr>
+                    <td><input type="radio" id="M" name="drone" value="M"></td>
+                    <td class="boxItem"><label for="M">M</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="L" name="drone" value="L"></td>
+                    <td class="boxItem"><label for="L">L</label></td>
+                </tr>
+        </table>
+        
+        
+        
+        
+        
+        
+        <table class="suggestionsWrapper box">
+            <tr><th class="boxTitle">Suggestions</th></tr>
+                <tr>
+                    <td class="boxItem">You should definitely purcahse this piece of clothing. It looks great on you!</td>
+                    </tr><tr>
+                    <td class="boxItem"><p>You should pay with your Discover credit card because it offers you 5% cash-back on this item.</p></td></tr><tr>
+                    <td class="boxItem">Size L is the way to go since you are a tall person.</td>                    </tr><tr>
+                    <td class="boxItem"><p>You should select the fastest shipping option so that you could show off your new outfit this weekend.</p></td>                    </tr><tr>
+                    <td class="boxItem">Stay true to yourself.</td>              
+                </tr>
+        </table>
+        <table class="userFeedbackWrapper box">
+            <tr>
+            <th class="boxTitle">User Feedback</th>
+            </tr><tr>
+            <td><img class="userFeedbackImg" src="images/userFeedback.jpg" alt="User Feedback"></td>
+            </tr><tr>
+            <td class="boxContent">998 Reviews</td>	
+                </tr>
+        </table>
+        
+        
+        
+    </body>
+</html>

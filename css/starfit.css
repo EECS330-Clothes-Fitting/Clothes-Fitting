@@ -7,12 +7,8 @@ body {
 }
 
 a {
-  color: #747375;
   text-decoration: none;
-  text-align: right;
-  line-height: 1.5;
-  font-size: 20px;
-  border-bottom: 1px solid #605a66;
+    color:inherit;
 }
 
 
@@ -121,7 +117,6 @@ input[type=submit]:hover {
   font-family: Tahoma, Arial, sans-serif;
 }
 .popup .close {
-  position: absolute;
   top: 20px;
   right: 30px;
   transition: all 200ms;
@@ -425,7 +420,6 @@ border-radius: 2px;
     font-family: Tahoma, Arial, sans-serif;
   }
   .popup .close {
-    position: absolute;
     top: 20px;
     right: 30px;
     transition: all 200ms;
@@ -439,5 +433,171 @@ border-radius: 2px;
   }
   .popup .content {
     max-height: 30%;
-    overflow: auto;
+    overflow: auto; 
   }
+
+
+/*url search bar and return to home button*/
+.searchBar{
+    width: 50%;
+    margin-left: 25%;
+    margin-right:25%;
+}
+input.search-url[type = submit]{
+	font-size: 14px;
+	height: 35px;
+	text-align: center;
+    padding:10px;
+    margin:5px;
+}
+.url{
+	font-size: 14px;
+	width: 400px;
+	height: 30px;
+    margin:5px;
+}
+input.return-home[type = submit]{
+	background-color: #6a6e6a;
+    padding:10px;
+    margin:5px;
+	font-size: 14px;
+}
+/*fit results table*/
+.fit-wrapper{
+	background-color: #f2f2f2;
+	float: right;
+    clear:right;
+	text-align: left;
+	font-size: 14px;
+	width: 50%;
+	border-collapse: collapse;
+	border-color: #353238;
+	color: #353238;
+	font-family: "Trebuchet MS", Helvetica;
+    margin-right: 25%;
+    margin-top:15px;
+}
+.fit-scores{
+	width: 10px;
+	padding: 5px;
+	height: 30px;
+
+}
+.fit-wrapper th{
+	font-size: 16px;
+	padding: 5px;
+}
+td.fit-scores{
+	border-bottom: 1px #6a6e6a;
+}
+.slidecontainer{
+	width: 80px;
+	height: 30px;
+}
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  width: 350px; /* Full-width */
+  height: 10px;
+  background: #d3d3d3; 
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  width: 8px; /* Slider handle width */
+  height: 18px; /* Slider handle height */
+  background: #8e689f; 
+}
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50;
+}
+input[type="range"]::-moz-range-track {
+  padding: 0 10px;
+  background: repeating-linear-gradient(to right, 
+    #ccc, 
+    #ccc 10%, 
+    #000 10%, 
+    #000 11%, 
+    #ccc 11%, 
+    #ccc 20%);
+}
+    
+
+    
+
+.simulatedLookWrapper {
+    float:left;
+    clear:left;
+	}
+
+	.simulatedImg {
+		height: 400px;
+		width: auto;
+	}
+.simulatedLookWrapper .boxItem{
+    padding-bottom: 0px;
+    
+}
+
+.suggestionsWrapper {
+		width: 320px;
+    float:left;
+	}
+
+.descriptionWrapper {
+		float:left;
+	}
+.box{
+    margin:15px;
+    width: auto;
+		border: 2px #8e689f solid;
+		background-color: #d4abe6;
+	}
+
+	.boxTitle {
+		height: 20px;
+		width: 100%;
+		text-align: left;
+		font-size: 20px;
+		background-color:#8e689f ;
+		color: white;
+        padding:10px;
+	}
+
+	.descriptionRows {
+		top: 20%;
+		left: 15%;
+	}
+
+	.boxContent {
+		color: white;
+		font-size: 15px;
+	}
+
+	.boxItem { 
+		padding: 5px;
+		color: #5e386f;
+	}	
+
+.storelink{
+    text-align: center;
+    font-size:18px;
+    color:#5e386f;
+    text-decoration: underline
+}
+
+.userFeedbackWrapper {
+    float:right;
+    clear:right;
+	}
+
+
+	.userFeedbackImg{
+		height: 300px;
+		width: auto;
+	}
+
+.suggestionsWrapper p{
+    text-overflow: 
+}
+
