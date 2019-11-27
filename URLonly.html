@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fit Results | StarFit</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/starfit.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    </head>
+    
+    <body>
+        <div class = "header">
+            <div class="page-title">StarFit: Find Your Fit</div>
+            <div class = "account-options">
+                <a href = "index.html">
+                    <img class = "account-img" src = "images/girl2.png"  alt = "Current User Account" title = "My Account">
+                    <div class = "account-name">Ahri</div>
+                </a>
+                <div class = "account-dropdown">
+                    <button class = "dropbtn">
+                        <img class = "account-button" src = "images/dropdown.png" alt = "List of Account Options" title = "Account Options">
+                    </button>
+                    <div class = "account-list">
+                        <a href="#">Account Settings</a>
+                        <a href="#">Friends List</a>
+                        <a href="#">Sign Out</a>
+                    </div>
+                </div>
+                <div class = "notifications-hover">
+                    <span>
+                    <img class = "account-notifications" src = "images/alerts.png"  alt = "User Notifications" title = "Notifications">
+                    </span>
+                    <div class = "notifications-list">
+                    You have no notifications.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "home-button">
+            <a href= "index.html">
+                <input class = "return-home" type="submit" value="Return to Home">
+                <form class="search" action = "/action_page.php">
+                </form>
+            </a>
+        </div>
+        <form action = "fitScoreURLInput.html">
+            <table class = "searchBar">
+                <tr><td><input class = "url" type="url" name="URL" placeholder="Enter Clothing URL" required></td>
+
+                    <td class = search-button>
+                        <input class = "search-url" type="submit" value="Try it on!">
+                    </td>
+                </tr>
+            </table>
+        </form>     
+    </body>
+</html>
