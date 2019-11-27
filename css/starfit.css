@@ -66,7 +66,7 @@ input[type=submit]:hover {
 }
 
 .container {
-    display: inline-block;
+  display: inline-block;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
@@ -117,6 +117,7 @@ input[type=submit]:hover {
   font-family: Tahoma, Arial, sans-serif;
 }
 .popup .close {
+  position: absolute;
   top: 20px;
   right: 30px;
   transition: all 200ms;
@@ -459,7 +460,26 @@ border-radius: 2px;
   display: block;
 }
 
-#popup
+/* Unit switch */
+.unit-toggle{
+  display:inline-block;
+  padding:0.3em 1.2em;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#FFFFFF;
+  background-color:#a55fe7;
+  text-align:center;
+  transition: all 0.2s;
+}
+
+.unit-toggle:hover{
+  background-color:#7f34a1;
+}
+
+/* #popup */
 
 .info-button {
     font-size: 1em;
@@ -522,7 +542,7 @@ border-radius: 2px;
   }
 
 
-/*url search bar*/
+
 .searchBar{
     position: relative;
   float: top;
