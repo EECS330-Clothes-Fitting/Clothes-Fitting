@@ -548,16 +548,14 @@ input.search-url[type = submit]{
 /*fit results table*/
 .fit-wrapper{
 	background-color: #f2f2f2;
-	float: right;
+    margin:15px 36%;
 	text-align: left;
 	font-size: 14px;
-	width: 40%;
+	width: 550px;
 	border-collapse: collapse;
 	border-color: #353238;
 	color: #353238;
 	font-family: "Trebuchet MS", Helvetica;
-    margin-right: 15px;
-    margin-top:15px;
 }
 
 .stitle{
@@ -582,8 +580,7 @@ td.fit-scores{
 	border-bottom: 1px #6a6e6a;
 }
 .slidecontainer{
-	width: 80px;
-	height: 30px;
+    padding:5px;
 }
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
@@ -637,6 +634,7 @@ input[type="range"]::-moz-range-track {
 
 .descriptionWrapper {
 		float:left;
+    clear:left;
 	}
 .box{
     margin:15px;
@@ -706,7 +704,19 @@ input[type="range"]::-moz-range-track {
 }
 
 .ReSearchBar{
-    margin: 15px;
-    float: right;
+    margin: 15px 30%;
+    
     width:40%;
 }
+
+	.covered {
+        position:relative;
+	}
+
+	.whiteTshirt {
+		position: absolute;
+		top: 18%;
+		left: 12%;
+		height: 60%;
+		width: 80%;
+	}
