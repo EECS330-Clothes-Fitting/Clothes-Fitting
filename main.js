@@ -23,7 +23,7 @@ function setStar(item, rating) {
 }
 
 function openTryOn(){
-    alert("You are going to try on clothes! (not implemented)")
+    alert("You are going to try on clothes!")
 }
 
 function saveChanges(){
