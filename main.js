@@ -22,9 +22,6 @@ function setStar(item, rating) {
     document.getElementById("m"+item).className="dropdown-set"
 }
 
-function openTryOn(){
-    alert("Not implemented")
-}
 
 function validateForm(){
     var x = document.getElementById("name").value;
