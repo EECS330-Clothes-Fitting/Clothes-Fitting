@@ -549,16 +549,24 @@ input.search-url[type = submit]{
 .fit-wrapper{
 	background-color: #f2f2f2;
 	float: right;
-    clear:right;
 	text-align: left;
 	font-size: 14px;
-	width: 50%;
+	width: 40%;
 	border-collapse: collapse;
 	border-color: #353238;
 	color: #353238;
 	font-family: "Trebuchet MS", Helvetica;
-    margin-right: 25%;
+    margin-right: 15px;
     margin-top:15px;
+}
+
+.stitle{
+    width: 40%
+}
+
+.ReSearchBar .home-button{
+    width:90%;
+    margin: 0 10px;
 }
 .fit-scores{
 	width: 10px;
@@ -684,3 +692,21 @@ input[type="range"]::-moz-range-track {
     text-overflow: 
 }
 
+.reviewWrapper{
+    width:575px;
+}
+
+.reviewNumber{
+    font-weight:bold;
+    font-size:18px;
+}
+
+.reviewWrapper .boxContent{
+    padding:7px;
+}
+
+.ReSearchBar{
+    margin: 15px;
+    float: right;
+    width:40%;
+}
