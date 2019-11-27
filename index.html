@@ -64,44 +64,49 @@
         <div class ="selected-profile-container">
             <img id="profile-pic" src="https://cdn.pixabay.com/photo/2017/05/18/17/58/women-2324247_960_720.png" alt="profile picture">
             <div class="container">
-                <form action="/action_page.php">
+                    
+                <form name="measurements" action="">
                     <table>
                         <tr>
-                            <td><label for="name">Name*</label></td>
-                            <td><input type="text" id="name" name="username" placeholder="Your name.."></td>
+                            <td><button class="unit-toggle" onclick="unitSwitch()">Imperial/Metric</button></td>
                         </tr>
                         <tr>
-                            <td><label for="gender">Gender*</label></td>
+                            <td><label for="name">Name*</label></td>
+                            <td><input type="text" id="name" name="username" placeholder="Your name.." required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="gender">Gender</label></td>
                             <td><select id="gender" name="gender">
                                 <option>Choose your gender...</option>
                                 <option value="m">Male</option>
                                 <option value="f">Female</option>
+                                <option value="na">I don't wish to answer</option>
                                 </select></td>
                         <tr>
-                            <td><label for="h">Height* (cm) </label></td>
-                            <td><input type="number" id="h" name="height" placeholder="Your height..."></td>
+                            <td><label id="h_label" for="h">Height* (cm)</label></td>
+                            <td><input type="number" id="h" name="height" placeholder="Your height..." required></td>
                         </tr>
                         <tr>
-                            <td><label for="w">Weight* (kg)</label></td>
-                            <td><input type="number" id="w" name="weight" placeholder="Your weight..."></td>
+                            <td><label id="w_label" for="w">Weight* (kg)</label></td>
+                            <td><input type="number" id="w" name="weight" placeholder="Your weight..." required></td>
 
                         <tr>
-                            <td><label for="c">Chest (cm)</label></td>
+                            <td><label id="c_label" for="c">Chest (cm)</label></td>
                             <td><input type="number" id="c" name="chest" placeholder="Your chest measurement..."></td>
                             <td><a class="info-button" href="#popup1"><i class="fas fa-question-circle"></i></a></td>
                         </tr>
                         <tr>
-                            <td><label for="wa">Waist (cm)</label></td>
+                            <td><label id="wa_label" for="wa">Waist (cm)</label></td>
                             <td><input type="number" id="wa" name="waist" placeholder="Your waist measurement ..."></td>
                             <td><a class="info-button" href="#popup2"><i class="fas fa-question-circle"></i></a></td>
                         </tr>
                         <tr>
-                            <td><label for="b">Hip (cm)</label></td>
+                            <td><label id="b_label" for="b">Hip (cm)</label></td>
                             <td><input type="number" id="b" name="hip" placeholder="Your hip measurement ..."></td>
                             <td><a class="info-button" href="#popup3"><i class="fas fa-question-circle"></i></a></td>
                         </tr>
                         <tr>
-                            <td><label for="s">Sleeve length (cm)</label></td>
+                            <td><label id="s_label"for="s">Sleeve length (cm)</label></td>
                             <td><input type="number" id="s" name="sleeve" placeholder="Your sleeve length ..."></td>
                             <td><a class="info-button" href="#popup4"><i class="fas fa-question-circle"></i></a></td>
                         </tr>
@@ -113,6 +118,16 @@
                         </tr>
                     </table>
                 </form>
+            </div>
+        </div>
+        <div id="saved" class="overlay">
+            <div class="popup">
+                <h2>Yay!</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    <img class="popup-pic"src="images/chest.png"> <br>
+                    The changes were successfully saved! Try on some clothes!<br>
+                </div>
             </div>
         </div>
 
