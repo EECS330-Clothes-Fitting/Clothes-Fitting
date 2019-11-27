@@ -10,6 +10,7 @@
     </head>
     
     <body>
+        <script src="simulatedLook.js"></script>
         <div class = "header">
             <div class="page-title">StarFit: Find Your Fit</div>
             <div class = "account-options">
@@ -17,43 +18,71 @@
                     <img class = "account-img" src = "images/girl2.png"  alt = "Current User Account" title = "My Account">
                     <div class = "account-name">Ahri</div>
                 </a>
+                <div class = "notifications-hover">
+                    <img class = "account-notifications" src = "images/alerts.png"  alt = "User Notifications" title = "Notifications">
+                    <div class = "notifications-list">
+                    You have no notifications.
+                    </div>
+                </div>
                 <div class = "account-dropdown">
-                    <button class = "dropbtn">
-                        <img class = "account-button" src = "images/dropdown.png" alt = "List of Account Options" title = "Account Options">
-                    </button>
+                    <img class = "account-button" src = "images/dropdown.png" alt = "List of Account Options" title = "Account Options">
                     <div class = "account-list">
                         <a href="#">Account Settings</a>
                         <a href="#">Friends List</a>
                         <a href="#">Sign Out</a>
                     </div>
                 </div>
-                <div class = "notifications-hover">
-                    <span>
-                    <img class = "account-notifications" src = "images/alerts.png"  alt = "User Notifications" title = "Notifications">
-                    </span>
-                    <div class = "notifications-list">
-                    You have no notifications.
-                    </div>
-                </div>
             </div>
         </div>
-        <div class = "home-button">
-            <a href= "index.html">
-                <input class = "return-home" type="submit" value="Return to Home">
-                <form class="search" action = "/action_page.php">
-                </form>
-            </a>
-        </div>
+        <table class="simulatedLookWrapper box">
+            <tr> <th class="boxTitle" colspan="3">Simulated Look</th></tr>
+            <tr><td class="boxItem covered" rowspan="3" >
+                
+                <img class="simulatedImg" src="images/simulatedLook.jpg" alt="Big Face Fur Jacket">
+                <img class="whiteTshirt" id="whiteTshirt" src="images/whiteTshirt.png" id="whiteTshirt" alt="White T"></td>
+                    <td><input type="radio" id="S" name="drone" value="S" onchange="changeTo('S')"></td>
+                    <td class="boxItem"><label for="S">S</label></td>
+                </tr>
+            <tr>
+                    <td><input type="radio" id="M" name="drone" value="M" onchange="changeTo('M')" checked></td>
+                    <td class="boxItem"><label for="M">M</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="L" name="drone" value="L" onchange="changeTo('L')"></td>
+                    <td class="boxItem"><label for="L">L</label></td>
+                </tr>
+        </table>
+        
         <form action = "fitScoreURLInput.html">
-            <table>
-                <tr><td><input class = "url" type="url" name="URL" placeholder="Enter Clothing URL" required></td>
-
+            <table class = "searchBar ReSearchBar">
+                <tr><td class="stitle"><div class="searchTitle">Check New Clothing Fit</div></td>
+                    <form class="search" action = "/action_page.php"></form>
+                    <td><input class = "url" type="url" name="URL" placeholder="Enter Clothing URL" required></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href= "index.html">
+                            <div class = "home-button">
+                            Return to Home Page
+                            </div>
+                        </a>
+                    </td>
                     <td class = search-button>
                         <input class = "search-url" type="submit" value="Try it on!">
                     </td>
+                    
                 </tr>
             </table>
-        </form> 
+        </form>     
+        <table class="userFeedbackWrapper box">
+            <tr>
+            <th class="boxTitle">User Feedback</th>
+            </tr><tr>
+            <td><img class="userFeedbackImg" src="images/userFeedback.jpg" alt="User Feedback"></td>
+            </tr><tr>
+            <td class="boxContent">998 Reviews</td>	
+                </tr>
+        </table>
 
         <table class = "fit-wrapper" border = "1">
             <tr >
@@ -68,39 +97,41 @@
             </tr>
             <tr>
                 <td class = "fit-scores">Chest</td>
-                <td class = "fit-scores">52</td>
+                <td class = "fit-scores" id="cscore">52</td>
                 <td class="slidecontainer">
-                    <input type="range" min="0" max="100" value="52" step = "1" class="slider" list = "steplist">
-                    <!--<datalist id="steplist">
-<option value = "0" label = "More Snug">0</option>
-<option value = "50">50</option>
-<option value = "100" label = "More Loose">100</option>
-</datalist>
--->
+                    <input type="range" min="0" max="100" value="52" class="slider" id="chest" disabled>
                 </td>			
             </tr>
             <tr>
                 <td class = "fit-scores">Waist</td>
-                <td class = "fit-scores">56</td>
+                <td class = "fit-scores" id="wscore">56</td>
                 <td class="slidecontainer">
-                    <input type="range" min="0" max="100" value="56" class="slider" id="myRange">
+                    <input type="range" min="0" max="100" value="56" class="slider" id="waist" disabled>
                 </td>	
             </tr>
             <tr>
                 <td class = "fit-scores">Hip</td>
-                <td class = "fit-scores">48</td>
+                <td class = "fit-scores" id="hscore">48</td>
                 <td class="slidecontainer">
-                    <input type="range" min="0" max="100" value="48" class="slider" id="myRange">
+                    <input type="range" min="0" max="100" value="48" class="slider" id="hip" disabled>
                 </td>					
             </tr>
             <tr>
                 <td class = "fit-scores">Sleeves</td>
-                <td class = "fit-scores">34</td>
+                <td class = "fit-scores" id="sscore">36</td>
                 <td class="slidecontainer">
-                    <input type="range" min="0" max="100" value="34" class="slider" id="myRange">
+                    <input type="range" min="0" max="100" value="34" class="slider" id="sleeves" disabled>
+                </td>					
+            </tr>
+            <tr>
+                <td class = "fit-scores">Overall</td>
+                <td class = "fit-scores" id="oscore">48</td>
+                <td class="slidecontainer">
+                    <input type="range" min="0" max="100" value="47" class="slider" id="overall" disabled>
                 </td>					
             </tr>
         </table>
+        
         <table class="descriptionWrapper box">
             <tr >
                 <th colspan="2" class="boxTitle">Specifications Summary</th>
@@ -139,21 +170,6 @@
                     <td class="storelink" colspan="2"><a id="storeLink" href="https://store.moncler.com/en-us/parka_cod4146401443491697.html#dept=sbm-icons-w">Go to Store</a></td>
                 </tr>
         </table>
-        <table class="simulatedLookWrapper box">
-            <tr> <th class="boxTitle" colspan="3">Simulated Look</th></tr>
-            <tr><td class="boxItem" rowspan="3" ><img class="simulatedImg" src="images/simulatedLook.jpg" alt="Big Face Fur Jacket"></td>
-                    <td><input type="radio" id="S" name="drone" value="S"></td>
-                    <td class="boxItem"><label for="S">S</label></td>
-                </tr>
-            <tr>
-                    <td><input type="radio" id="M" name="drone" value="M"></td>
-                    <td class="boxItem"><label for="M">M</label></td>
-                </tr>
-                <tr>
-                    <td><input type="radio" id="L" name="drone" value="L"></td>
-                    <td class="boxItem"><label for="L">L</label></td>
-                </tr>
-        </table>
         
         
         
@@ -161,23 +177,18 @@
         
         
         <table class="suggestionsWrapper box">
-            <tr><th class="boxTitle">Suggestions</th></tr>
+            <tr><th class="boxTitle">Suggestions</th></tr><tr>
+            <td class="boxItem">Size L is the way to go since you are a tall person.</td>                    </tr>
                 <tr>
-                    <td class="boxItem">You should definitely purcahse this piece of clothing. It looks great on you!</td>
-                    </tr><tr>
-                    <td class="boxItem"><p>You should pay with your Discover credit card because it offers you 5% cash-back on this item.</p></td></tr><tr>
-                    <td class="boxItem">Size L is the way to go since you are a tall person.</td>                    </tr><tr>
-                    <td class="boxItem"><p>You should select the fastest shipping option so that you could show off your new outfit this weekend.</p></td>                    </tr><tr>
-                    <td class="boxItem">Stay true to yourself.</td>              
-                </tr>
-        </table>
-        <table class="userFeedbackWrapper box">
+                    <td class="boxItem">You should definitely purchase this piece of clothing. It looks great on you!</td>
+                    </tr>
             <tr>
-            <th class="boxTitle">User Feedback</th>
-            </tr><tr>
-            <td><img class="userFeedbackImg" src="images/userFeedback.jpg" alt="User Feedback"></td>
-            </tr><tr>
-            <td class="boxContent">998 Reviews</td>	
+                    <td class="boxItem">You should pay with your Discover credit card because it offers you 5% cash-back on this item.</td></tr>
+                    <tr>
+                    <td class="boxItem">You should select the fastest shipping option so that you could show off your new outfit this weekend.</td>
+            </tr>
+            <tr>
+                    <td class="boxItem">Stay true to yourself.</td>              
                 </tr>
         </table>
         

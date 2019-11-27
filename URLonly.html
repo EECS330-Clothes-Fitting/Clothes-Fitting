@@ -17,40 +17,42 @@
                     <img class = "account-img" src = "images/girl2.png"  alt = "Current User Account" title = "My Account">
                     <div class = "account-name">Ahri</div>
                 </a>
+                <div class = "notifications-hover">
+                    <img class = "account-notifications" src = "images/alerts.png"  alt = "User Notifications" title = "Notifications">
+                    <div class = "notifications-list">
+                    You have no notifications.
+                    </div>
+                </div>
                 <div class = "account-dropdown">
-                    <button class = "dropbtn">
-                        <img class = "account-button" src = "images/dropdown.png" alt = "List of Account Options" title = "Account Options">
-                    </button>
+                    <img class = "account-button" src = "images/dropdown.png" alt = "List of Account Options" title = "Account Options">
                     <div class = "account-list">
                         <a href="#">Account Settings</a>
                         <a href="#">Friends List</a>
                         <a href="#">Sign Out</a>
                     </div>
                 </div>
-                <div class = "notifications-hover">
-                    <span>
-                    <img class = "account-notifications" src = "images/alerts.png"  alt = "User Notifications" title = "Notifications">
-                    </span>
-                    <div class = "notifications-list">
-                    You have no notifications.
-                    </div>
-                </div>
             </div>
         </div>
-        <div class = "home-button">
-            <a href= "index.html">
-                <input class = "return-home" type="submit" value="Return to Home">
-                <form class="search" action = "/action_page.php">
-                </form>
-            </a>
-        </div>
+        
         <form action = "fitScoreURLInput.html">
             <table class = "searchBar">
-                <tr><td><input class = "url" type="url" name="URL" placeholder="Enter Clothing URL" required></td>
-
+                <tr><td colspan="2"><div class="searchTitle">Check Clothing Fit</div></td></tr>
+                <tr>
+                    <form class="search" action = "/action_page.php"></form>
+                    <td colspan="2"><input class = "url" type="url" name="URL" placeholder="Enter Clothing URL" required></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href= "index.html">
+                            <div class = "home-button">
+                            Return to Home Page
+                            </div>
+                        </a>
+                    </td>
                     <td class = search-button>
                         <input class = "search-url" type="submit" value="Try it on!">
                     </td>
+                    
                 </tr>
             </table>
         </form>     
