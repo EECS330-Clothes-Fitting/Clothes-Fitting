@@ -29,7 +29,7 @@
                     <div class = "account-list">
                         <a href="#">Account Settings</a>
                         <a href="#">Friends List</a>
-                        <a href="#">Sign Out</a>
+                        <a href="login.html">Sign Out</a>
                     </div>
                 </div>
             </div>
@@ -78,6 +78,46 @@
                 </tr>
             </table>
         </form>     
+        
+        <script src="userFeedback.js"></script>
+        <table class="box reviewWrapper">
+            <tr>
+                <th class="boxTitle" colspan="2">Submit Your Review</th>
+                <th class="boxTitle">Other Users' Feedback</th>
+            </tr>
+            <tr>
+                <td class="boxContent" colspan="2">Given your body measurements, we suggested you to purchase size M for this piece of clothing. If you purchased the product, how did it actually fit you?</td>
+                <td rowspan="4"><img id="userFeedbackImg" src="images/userFeedback2.jpg" alt="User Feedback"></td>
+            </tr>
+            <tr>
+                <td class="boxContent">
+                    <input type="radio" id="option1" name="drone" value="option1" >
+                </td>
+                <td class="boxContent">
+                    <label for="option1">The size is too small.</label>
+                </td>
+            </tr>
+            <tr>			
+                <td class=boxContent>
+                    <input type="radio" id="option2" name="drone" value="option2" >   
+                </td>
+                <td class="boxContent">
+                    <label for="option2">The size is just about right.</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="boxContent">
+                    <input type="radio" id="option3" name="drone" value="option3" >
+                </td>
+                <td class="boxContent">
+                    <label for="option3">The size is too big.</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="boxContent"><input class="submitButton" type="submit" onclick="userFeedbackMain()" value="Submit Review"></td>
+                <td class="boxContent reviewNumber">9 reviews</td>
+            </tr>
+        </table>
         
         <table class = "fit-wrapper" border = "1">
             <tr >
@@ -187,45 +227,7 @@
                 </tr>
         </table>
         
-        <script src="userFeedback.js"></script>
-        <table class="box reviewWrapper">
-            <tr>
-                <th class="boxTitle" colspan="2">Submit Your Review</th>
-                <th class="boxTitle">Other Users' Feedback</th>
-            </tr>
-            <tr>
-                <td class="boxContent" colspan="2">Given your body measurements, we suggested you to purchase size M for this piece of clothing. If you purchased the product, how did it actually fit you?</td>
-                <td rowspan="4"><img id="userFeedbackImg" src="images/userFeedback2.jpg" alt="User Feedback"></td>
-            </tr>
-            <tr>
-                <td class="boxContent">
-                    <input type="radio" id="option1" name="drone" value="option1" >
-                </td>
-                <td class="boxContent">
-                    <label for="option1">The size is too small.</label>
-                </td>
-            </tr>
-            <tr>			
-                <td class=boxContent>
-                    <input type="radio" id="option2" name="drone" value="option2" >   
-                </td>
-                <td class="boxContent">
-                    <label for="option2">The size is just about right.</label>
-                </td>
-            </tr>
-            <tr>
-                <td class="boxContent">
-                    <input type="radio" id="option3" name="drone" value="option3" >
-                </td>
-                <td class="boxContent">
-                    <label for="option3">The size is too big.</label>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" class="boxContent"><input class="submitButton" type="submit" onclick="userFeedbackMain()" value="Submit Review"></td>
-                <td class="boxContent reviewNumber">9 reviews</td>
-            </tr>
-        </table>
+        
         
         
     </body>

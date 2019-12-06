@@ -19,7 +19,7 @@ table {
     border-spacing: 0px;
 }
 
-input[type=text], input[type=number], select, textarea {
+input[type=text], input[type=number], input[type=password], select, textarea {
   width: 100%;
       padding: 0px 12px;
   border: 1px solid #ccc;
@@ -499,7 +499,7 @@ input.search-url[type = submit]{
     font-weight:bold;
     border-radius:4px;
     text-align: center;
-    width:50%
+    width:50%;
 }
 
 .searchTitle{
@@ -693,3 +693,28 @@ input[type="range"]::-moz-range-track {
     height:232px;
     width:336px;
 	}
+
+
+
+.loginRegister{
+    width: 30%;
+    margin-left:35%;
+    margin-right:35%;
+    margin-top:10%;
+    margin-bottom: 20%;
+}
+
+
+.logininput{
+    padding:10px;
+	font-size: 16px;
+    width: 100%;
+	height: 40px;
+    margin:5px;
+}
+
+.loginTitle{
+    font-size:24px;
+    font-weight: bold;
+    color:#6e487f;
+}
