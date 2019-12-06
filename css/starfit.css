@@ -19,13 +19,14 @@ table {
     border-spacing: 0px;
 }
 
-input[type=text], input[type=number], select, textarea {
+input[type=text], input[type=number], input[type=password], select, textarea {
   width: 100%;
-  padding: 12px;
+      padding: 0px 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
   color: #747375;
+height:39px;
 }
 
 
@@ -36,7 +37,7 @@ label {
     width: 100%;
 }
 
-input[type=submit] {
+input[type=submit],input[type=button] {
 	margin-top:10px;
   background-color: #8e689f;
   color: white;
@@ -73,70 +74,7 @@ input[type=submit]:hover {
 	width:40%;
 }
 
-.info-button {
-  font-size: 1em;
-  padding: 10px;
-  color: gray;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-.info-button:hover {
-  color: purple;
-}
 
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 30%;
-  position: relative;
-  transition: all 5s ease-in-out;
-}
-
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: #06D85F;
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
-}
-
-.popup-pic{
-    width:100%;
-}
 
 #sleeve{
     width:60%;
@@ -458,20 +396,24 @@ border-radius: 2px;
 }
 
 /* #popup */
+.infobuttoncontainer {
+ width=45px;   
+}
 
 .info-button {
-    font-size: 1em;
-    padding: 10px;
-    color: gray;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
+  font-size: 1em;
+    width: 45px;
+  padding: 10px;
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
   }
   .info-button:hover {
     color: purple;
-  }
-  
-  .overlay {
+ 
+}
+ .overlay {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -481,6 +423,7 @@ border-radius: 2px;
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+    z-index: 1;
   }
   .overlay:target {
     visibility: visible;
@@ -503,7 +446,9 @@ border-radius: 2px;
     font-family: Tahoma, Arial, sans-serif;
   }
   .popup .close {
-    top: 20px;
+      position: absolute;
+
+      top: 20px;
     right: 30px;
     transition: all 200ms;
     font-size: 30px;
@@ -518,7 +463,9 @@ border-radius: 2px;
     max-height: 30%;
     overflow: auto; 
   }
-
+.popup-pic{
+    width:100%;
+}
 
 
 .searchBar{
@@ -552,7 +499,7 @@ input.search-url[type = submit]{
     font-weight:bold;
     border-radius:4px;
     text-align: center;
-    width:50%
+    width:50%;
 }
 
 .searchTitle{
@@ -568,7 +515,8 @@ input.search-url[type = submit]{
 /*fit results table*/
 .fit-wrapper{
 	background-color: #f2f2f2;
-    margin:15px 36%;
+    margin:55px;
+margin-left: 25%;
 	text-align: left;
 	font-size: 14px;
 	width: 550px;
@@ -595,6 +543,7 @@ input.search-url[type = submit]{
 .fit-wrapper th{
 	font-size: 16px;
 	padding: 5px;
+    
 }
 td.fit-scores{
 	border-bottom: 1px #6a6e6a;
@@ -633,29 +582,6 @@ input[type="range"]::-moz-range-track {
 
     
 
-.simulatedLookWrapper {
-    float:left;
-    clear:left;
-	}
-
-	.simulatedImg {
-		height: 400px;
-		width: auto;
-	}
-.simulatedLookWrapper .boxItem{
-    padding-bottom: 0px;
-    
-}
-
-.suggestionsWrapper {
-		width: 320px;
-    float:left;
-	}
-
-.descriptionWrapper {
-		float:left;
-    clear:left;
-	}
 .box{
     margin:15px;
     width: auto;
@@ -702,16 +628,16 @@ input[type="range"]::-moz-range-track {
 
 
 	.userFeedbackImg{
-		height: 300px;
+		height: 166px;
 		width: auto;
 	}
 
-.suggestionsWrapper p{
-    text-overflow: 
-}
 
 .reviewWrapper{
     width:575px;
+    float:right;
+    margin-top:40px;
+    margin-top:40px;
 }
 
 .reviewNumber{
@@ -740,3 +666,55 @@ input[type="range"]::-moz-range-track {
 		height: 60%;
 		width: 80%;
 	}
+
+
+.simulatedLookWrapper {
+    float:left;
+    clear:left;
+	}
+
+	.simulatedImg {
+		height: 400px;
+		width: auto;
+	}
+.simulatedLookWrapper .boxItem{
+    padding-bottom: 0px;
+    
+}
+
+.suggestionsWrapper {
+    height:232px;
+    float:left;
+	}
+
+.descriptionWrapper {
+		float:left;
+    clear:left;
+    height:232px;
+    width:336px;
+	}
+
+
+
+.loginRegister{
+    width: 30%;
+    margin-left:35%;
+    margin-right:35%;
+    margin-top:10%;
+    margin-bottom: 20%;
+}
+
+
+.logininput{
+    padding:10px;
+	font-size: 16px;
+    width: 100%;
+	height: 40px;
+    margin:5px;
+}
+
+.loginTitle{
+    font-size:24px;
+    font-weight: bold;
+    color:#6e487f;
+}

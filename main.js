@@ -42,6 +42,12 @@ function saveChanges(){
     }
 }
 
+function openTryOn(){
+    if (validateForm()){
+        window.location="https://eecs330-clothes-fitting.github.io/Clothes-Fitting/fit-input.html"
+    }
+}
+
 function unitSwitch(){
     var h = document.getElementById("h_label");
     var w = document.getElementById("w_label");
